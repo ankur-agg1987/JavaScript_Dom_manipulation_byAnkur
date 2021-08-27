@@ -1,0 +1,18 @@
+<div id="main">
+    <h1 id="title">My Heading</h1>
+    <p id="hint"><span>This is some text.</span></p>
+</div>
+
+<script>
+var main = document.getElementById("main");
+
+// First check that the element has child nodes 
+if(main.hasChildNodes()) {
+    var nodes = main.children;
+    
+    // Loop through node list and display node name
+    for(var i = 0; i < nodes.length; i++) {
+        alert(nodes[i].nodeName);
+    }
+}
+</script>

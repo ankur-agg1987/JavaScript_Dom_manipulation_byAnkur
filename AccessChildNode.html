@@ -1,0 +1,12 @@
+<div id="main">
+    <h1 id="title">My Heading</h1>
+    <p id="hint"><span>This is some text.</span></p>
+</div>
+
+<script>
+var main = document.getElementById("main");
+console.log(main.firstChild.nodeName); // Prints: #text
+
+var hint = document.getElementById("hint");
+console.log(hint.firstChild.nodeName); // Prints: SPAN
+</script>

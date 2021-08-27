@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JS Select Elements with CSS Selectors</title>
+</head>
+<body>
+	<p id="myp">hello</p>
+    <ul>
+        <li>Bread</li>
+        <li class="tick">Coffee</li>
+        <li>Pineapple Cake</li>
+    </ul>
+        
+    <script>
+    // Selecting all li elements
+    var matches = document.querySelectorAll("ul li");
+     
+    // Printing the number of selected li elements
+    document.write("Number of selected elements: " + matches.length + "<hr>")
+     
+	 var ptag = document.getElementById("myp");
+	 ptag.innerHTML = "Number of selected elements: " + matches.length;
+	 
+    // Printing the content of selected li elements
+    for(var elem of matches) {  
+		document.write(elem+ "<br>");
+        document.write(elem.innerHTML + "<br>");
+    }
+	
+	for(var elem in matches) {  
+        document.write(elem + "<br>");
+    }
+     
+    // Applying line through style to first li element with class tick
+    matches = document.querySelectorAll("ul li.tick");
+    matches[0].style.textDecoration = "line-through";
+    </script>
+</body>
+</html>
